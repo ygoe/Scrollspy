@@ -201,6 +201,9 @@
 					}
 				});
 
+				// Update the state from the current scroll position
+				container.trigger('scroll.' + options.namespace);
+
 			});
 		}
 	});
