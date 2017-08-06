@@ -1,6 +1,6 @@
 ﻿/*!
  * Scrollspy Plugin
- * Author: r3plica
+ * Authors: r3plica, Yves Goergen
  * Licensed under the MIT license
  */
 ; (function ($, window, document, undefined) {
