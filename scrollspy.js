@@ -16,6 +16,7 @@
                 namespace: 'scrollspy',
                 activeClass: 'active',
                 animate: false,
+                animateDuration: 1000,
                 offset: 0,
                 container: window
             };
@@ -127,7 +128,7 @@
                             if (options.animate) {
 
                                 // Animate our scroll
-                                $('html, body').animate({ scrollTop: top }, 1000);
+                                $('html, body').animate({ scrollTop: top }, options.animateDuration);
                             } else {
 
                                 // Scroll to our position
