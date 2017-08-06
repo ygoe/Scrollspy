@@ -203,6 +203,16 @@
 
 				// Update the state from the current scroll position
 				container.trigger('scroll.' + options.namespace);
+				
+				// Update element offsets when the page layout changes
+				var pageHeight = $(document).height();
+				window.setInterval(function () {
+					if ($(document).height() != pageHeight) {
+						pageHeight = $(document).height();
+						elements = findElements(links);
+						container.trigger('scroll.' + options.namespace);
+					}
+				}, 1000);
 
 			});
 		}
